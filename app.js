@@ -12,7 +12,7 @@ app.controller("WeatherController", ['$http', function($http) {
 
         main.showWeather = false;
 
-        $http.jsonp('http://api.wunderground.com/api/a7942b382662121a/geolookup/conditions/forecast/astronomy/q/' + location + '.json?callback=JSON_CALLBACK')
+        $http.jsonp('http://api.wunderground.com/api//geolookup/conditions/forecast/astronomy/q/' + location + '.json?callback=JSON_CALLBACK')
             .success(function (data) {
 
             main.weather.city = data['current_observation']['observation_location']['city'];
